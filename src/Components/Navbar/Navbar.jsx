@@ -13,11 +13,6 @@ export default function Navbar() {
     }
     return <>
         <div className='outer'>
-            <div className="connection">
-                <Offline>
-                    <p><i className="fa-solid fa-wifi"></i> you might have connection issues <i className="fa-solid fa-wifi"></i></p>
-                </Offline>
-            </div>
             <div className="container">
                 <div className="navbar row">
                     <div className="logo col-1">

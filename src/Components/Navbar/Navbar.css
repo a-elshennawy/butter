@@ -9,25 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 0p;
-
-    .connection {
-        margin: 0 !important;
-        text-align: center;
-
-        p {
-            color: #fff;
-            font-family: bold;
-            letter-spacing: 2px;
-            padding: 5px;
-            background-color: #fd0000;
-            filter: drop-shadow(0 0 10px #fff);
-
-            i {
-                color: #fff;
-            }
-        }
-    }
+    padding: 0;
 
     .navbar {
         justify-content: center;
