@@ -8,7 +8,8 @@
 
         .drink {
             margin: 0px;
-            padding: 0;
+            padding: 0px;
+            width: 20%;
 
             .img {
                 position: relative;
@@ -78,6 +79,17 @@
 
                 }
 
+            }
+        }
+    }
+}
+
+/* }responsive */
+@media screen and (max-width:992px) {
+    .orderNow {
+        .samples {
+            .drink {
+                width: 40%;
             }
         }
     }

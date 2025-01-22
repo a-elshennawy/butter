@@ -20,6 +20,7 @@
         .post {
             outline: 1px solid #000;
             cursor: pointer;
+            width: 30%;
 
             .postInfo {
                 margin: 10px 0px;
@@ -48,6 +49,18 @@
                 outline: 1px solid #fd8f00;
                 box-shadow: 0 0 10px #fd8f00;
                 border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+/* responsive */
+@media screen and (max-width: 576px) {
+    .fromBlog {
+        .posts {
+            .post {
+                width: 80%;
             }
         }
     }
