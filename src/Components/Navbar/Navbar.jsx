@@ -1,6 +1,5 @@
 import './Navbar.css'
 import { Link, useNavigate } from "react-router-dom";
-import { Offline } from "react-detect-Offline"
 
 export default function Navbar() {
     const navigate = useNavigate()
