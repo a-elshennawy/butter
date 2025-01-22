@@ -1,0 +1,130 @@
+.blog {
+    justify-content: center;
+    position: relative;
+
+    .header {
+        background-image: url('/Images/site-img14.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+
+        .left {
+            color: #fff;
+
+            h2 {
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+
+            h6 {
+                font-family: bold;
+            }
+        }
+
+        .right {
+            color: #fff;
+            text-align: end;
+
+            p {
+                font-family: regular;
+            }
+        }
+    }
+
+    .insideBody {
+        justify-content: center;
+
+        .posts {
+            margin: 20px 0px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .post {
+                padding: 0;
+                margin: 20px 0px;
+                box-shadow: 0 0 10px #000;
+                border-radius: 10px;
+                overflow: hidden;
+
+                .img {
+                    padding: 0 !important;
+                }
+
+                .details {
+                    padding: 10px;
+
+                    .content {
+                        margin: 10px 0px;
+                        font-family: regular;
+                    }
+
+                    .bottomBar {
+                        border-top: 1px solid #a19d9d;
+                        align-items: center;
+                        padding: 10px 0px;
+
+                        i {
+                            margin-inline-end: 10px;
+                        }
+
+                        span {
+                            color: #fd8f00;
+                            font-family: bold;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .sideBar {
+            margin: 20px 0px;
+
+            h4 {
+                background-color: #000;
+                color: #fff;
+                font-family: bold;
+                text-transform: uppercase !important;
+                letter-spacing: 2px;
+                text-align: center;
+                padding: 20px;
+                margin: 20px 0px;
+            }
+
+            .day {
+                margin-bottom: 10px;
+
+                h5 {
+                    font-family: bold;
+                    margin: 0 !important;
+                }
+
+                h6 {
+                    font-family: regular;
+                    color: #fd8f00;
+                }
+            }
+
+            .btn {
+                border: 1px solid #000;
+                border-radius: 0;
+                font-family: regular;
+                width: fit-content;
+                padding: 10px 20px;
+                margin: 5px 10px;
+
+                &:focus {
+                    border: none;
+                    background-color: #fd8f00;
+                    color: #fff;
+                    font-family: bold;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+* {
+  text-transform: capitalize !important;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.upBtn {
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  background-color: #fd8f00;
+  border: none;
+
+  svg {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    height: 30px;
+    width: 30px;
+    border-radius: 0;
+    background-color: #fd8f00;
+    border: none;
+    font-size: 30px;
+    padding: 5px;
+  }
+}

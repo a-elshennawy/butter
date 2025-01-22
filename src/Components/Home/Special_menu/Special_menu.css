@@ -1,0 +1,59 @@
+.special {
+    text-align: center;
+
+    h2 {
+        font-family: bold;
+        text-transform: uppercase !important;
+        margin: 30px 0px;
+    }
+
+    .menu {
+        width: fit-content;
+        margin: 50px auto;
+        font-family: regular;
+
+
+        .item {
+            align-items: center;
+            text-align: center;
+            margin: 20px 0px;
+
+            h5 {
+                text-align: start;
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                position: relative;
+            }
+
+            h6 {
+                text-align: end;
+                color: #fd8f00;
+            }
+
+            p {
+                margin: 5px;
+                padding: 0;
+                text-align: start;
+            }
+        }
+    }
+
+    .goShop {
+        background-color: #fd8f00;
+        border: none;
+        padding: 10px 20px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase !important;
+            font-family: bold;
+            letter-spacing: 2px;
+        }
+
+        &:hover {
+            background-color: #303030;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.shop {
+    text-align: center;
+
+    .header {
+        text-align: start;
+        background-image: url('/Images/site-img10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+
+        .left {
+            color: #fff;
+
+            h2 {
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+
+            h6 {
+                font-family: bold;
+            }
+        }
+
+        .right {
+            color: #fff;
+            text-align: end;
+
+            p {
+                font-family: regular;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: #fd8f00;
+                    }
+                }
+            }
+        }
+    }
+
+    .items {
+        text-align: start;
+        justify-content: center;
+        margin: 40px 0px;
+        gap: 10px;
+
+        .category {
+            text-align: center;
+            margin: 40px 0px;
+
+            h3 {
+                font-family: bold;
+                text-transform: uppercase !important;
+            }
+        }
+
+        .drink {
+            margin: 0;
+            padding: 0;
+            width: 20%;
+
+            .img {
+                position: relative;
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+
+                img {
+                    transition: all .1s ease-in;
+                }
+            }
+
+            .info {
+                margin: 10px 0px;
+
+                h5 {
+                    text-transform: uppercase !important;
+                    font-family: bold;
+                    color: #000;
+                }
+
+                h6 {
+                    color: #fd8f00;
+                    font-family: bold;
+                }
+
+                p {
+                    color: gray;
+                }
+
+                .btn {
+
+                    padding: 10px 15px;
+                    border-radius: 0px;
+                    background-color: #fd8f00;
+                    color: #fff;
+                    text-transform: uppercase !important;
+                    font-family: bold;
+                    letter-spacing: 1px;
+
+                    &:hover {
+                        background-color: #303030;
+                        color: #fff;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .toOrders {
+        padding: 10px 20px;
+        background-color: #fd8f00;
+        margin: 30px 0px;
+        border: none;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-family: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase !important;
+        }
+
+        &:hover {
+            background-color: #303030;
+
+        }
+    }
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+    .shop {
+        .items {
+            .drink {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shop {
+        .items {
+            .drink {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .shop {
+        .items {
+            .drink {
+                width: 90%;
+            }
+        }
+    }
+}

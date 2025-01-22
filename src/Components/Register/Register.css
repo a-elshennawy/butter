@@ -1,0 +1,148 @@
+.register {
+    margin: 50px 0px;
+
+    .header {
+        background-image: url('/Images/site-img10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+
+        .left {
+            color: #fff;
+
+            h2 {
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+
+            h6 {
+                font-family: bold;
+            }
+        }
+    }
+
+    .registerform {
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        width: 30%;
+        margin: auto;
+        border: 1px solid #fd8f00;
+
+        h4 {
+            font-family: regular;
+            text-transform: uppercase !important;
+            text-align: center;
+            padding: 0;
+        }
+
+        .input-container {
+            position: relative;
+            padding: 0;
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #494646;
+                border-inline-start: 1px solid #494646;
+                padding-inline-start: 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                outline: 1px solid #000;
+                text-transform: none !important;
+
+                &:focus {
+                    border: none;
+                    outline: 1px solid #fd8f00;
+                }
+            }
+        }
+
+        .regBtn {
+            text-align: center;
+            margin: 20px 0px;
+
+            button {
+                border: none;
+                padding: 10px 20px;
+                background-color: #fd8f00;
+                color: #fff;
+                text-transform: uppercase !important;
+                font-family: bold;
+                letter-spacing: 2px;
+
+                &:hover {
+                    background-color: #494646;
+                }
+            }
+        }
+
+        .error {
+            background-color: #f53c3c60;
+            color: #fff;
+            font-family: regular;
+            text-align: start;
+            width: 100%;
+            margin: 5px 0px;
+            padding: 0px 5px;
+        }
+
+        p {
+            margin: 0;
+            font-family: regular;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: #fd8f00;
+                font-family: bold !important;
+            }
+        }
+    }
+}
+
+.guestBtn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    color: #fff;
+    background-color: #fd8f00;
+    padding: 10px 20px;
+    font-family: bold;
+    text-transform: uppercase !important;
+    letter-spacing: 2px;
+
+    &:hover {
+        background-color: #494646;
+
+    }
+}
+
+
+/* responsive */
+@media screen and (max-width: 992px) {
+    .register {
+        .registerform {
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register {
+        .registerform {
+            width: 60%;
+            margin: auto;
+        }
+    }
+}

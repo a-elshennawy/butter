@@ -1,0 +1,37 @@
+.call {
+    background-image: url("./Images/parallax-bg1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0px;
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        font-family: regular;
+
+        span {
+            font-family: bold;
+        }
+    }
+
+    .btn {
+        background-color: #fd8f00;
+        border-radius: 0;
+        padding: 20px 50px;
+        margin: 20px 0px;
+
+        a {
+            color: #fff;
+            font-family: bold;
+            text-transform: uppercase !important;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: #303030;
+        }
+    }
+}

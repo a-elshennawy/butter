@@ -1,0 +1,171 @@
+.cart {
+    height: 100%;
+
+    .header {
+        background-image: url('/Images/site-img10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+
+        .left {
+            color: #fff;
+
+            h2 {
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+
+            h6 {
+                font-family: bold;
+            }
+        }
+
+        .right {
+            color: #fff;
+            text-align: end;
+
+            p {
+                font-family: regular;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        color: #fd8f00;
+                    }
+                }
+            }
+        }
+    }
+
+    .orders {
+        justify-content: center;
+        margin: 30px 0px;
+        gap: 10px;
+
+        h3 {
+            text-align: center;
+            margin: 30px 0px;
+            font-family: regular;
+            text-transform: uppercase !important;
+
+            strong {
+                color: #3dff02;
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+        }
+
+        .order-card {
+            outline: 1px solid #000;
+            padding: 0px;
+
+            .info {
+                padding: 10px;
+                gap: 5px;
+
+                h3 {
+                    text-align: start;
+                    color: #fd8f00;
+                    font-family: bold;
+                    margin: 0;
+                }
+
+                h5 {
+                    color: #000;
+                    font-family: bold;
+                }
+
+                p {
+                    font-family: regular;
+                }
+
+                .timer {
+                    font-family: bold;
+                }
+
+                .notice {
+                    font-family: bold;
+                }
+
+                .btn {
+                    margin: auto;
+                    background-color: #fd8f00;
+                    border-radius: 0px;
+                    padding: 10px 40px;
+                    color: #fff;
+                    font-family: bold;
+
+                    &:hover {
+                        background-color: #303030;
+                    }
+                }
+            }
+        }
+
+        .no-orders {
+            text-align: center;
+            font-family: bold;
+        }
+    }
+
+    .order-history {
+        justify-content: center;
+        margin: 30px 0px;
+
+        h3 {
+            text-align: center;
+            margin: 30px 0px;
+            font-family: regular;
+            text-transform: uppercase !important;
+
+            strong {
+                color: #fd8f00;
+                text-transform: uppercase !important;
+                font-family: bold;
+            }
+        }
+
+        .hisotry-items {
+            justify-content: center;
+            gap: 10px;
+
+            .recievedItem-card {
+                outline: 1px solid #000;
+                padding: 0;
+
+                .info {
+                    padding: 10px;
+                    gap: 5px;
+
+                    h3 {
+                        text-align: start;
+                        color: #fd8f00;
+                        font-family: bold;
+                        text-transform: capitalize !important;
+                        margin: 0;
+                    }
+
+                    h5 {
+                        color: #000;
+                        font-family: bold;
+                    }
+
+                    p {
+                        font-family: regular;
+                    }
+                }
+            }
+
+            .no-orders {
+                text-align: center;
+                font-family: bold;
+            }
+        }
+    }
+
+}
