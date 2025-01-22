@@ -31,7 +31,7 @@ export default function Ordering() {
         }
 
         localStorage.setItem('orderedDrinks', JSON.stringify(storedOrders));
-        alert(`Drink with ID ${id} has been added to your orders!`)
+        alert(`Drink has been added to your orders!`)
     };
 
     return (
