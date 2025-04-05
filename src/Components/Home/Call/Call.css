@@ -1,5 +1,5 @@
-/* .call {
-  background-image: url("./static/parallax-bg1.jpg");
+.call {
+  background-image: url("/static/parallax-bg1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -34,4 +34,4 @@
       background-color: #303030;
     }
   }
-} */
+}
