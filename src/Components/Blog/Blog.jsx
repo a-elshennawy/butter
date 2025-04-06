@@ -76,12 +76,12 @@ export default function Blog() {
                     <div className="h3">{post.title}</div>
                     <div className="content">{post.content}</div>
                     <div className="bottomBar row">
-                      <div className="col-5">
+                      <div className="col-lg-5 col-12">
                         <i className="fa-solid fa-user"></i>
                         by <span>{post.creator}</span> on {post.date},{" "}
                         {post.time}
                       </div>
-                      <div className="col-5">
+                      <div className="col-lg-5 col-12">
                         <i className="fa-solid fa-comments"></i>
                         {post.comments_counter} /{" "}
                         {post.tags.includes(",")
