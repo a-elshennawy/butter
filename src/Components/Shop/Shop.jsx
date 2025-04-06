@@ -12,12 +12,42 @@ export default function Shop() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("./API.json")
-      .then((response) => response.json())
-      .then((data) => setDrinks(data))
-      .catch((error) =>
-        console.log("Error fetching data from your API file", error)
-      );
+    const fetchDrinks = async () => {
+      try {
+        const response = await fetch("./API.json");
+        if (!response.ok) throw new Error("Failed to fetch drinks");
+        const data = await response.json();
+        
+        // Add error handling for image loading
+        const drinksWithFallbacks = await Promise.all(
+          data.map(async (drink) => {
+            try {
+              // Test if image exists
+              await new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = resolve;
+                img.onerror = reject;
+                img.src = drink.image;
+              });
+              return drink;
+            } catch {
+              return {
+                ...drink,
+                image: "/path/to/fallback-image.jpg" // Add fallback image
+              };
+            }
+          })
+        );
+        
+        setDrinks(drinksWithFallbacks);
+      } catch (error) {
+        console.error("Error fetching drinks:", error);
+        // Set empty array or fallback data
+        setDrinks([]);
+      }
+    };
+  
+    fetchDrinks();
   }, []);
 
   const orderClick = (drink) => {
@@ -48,6 +78,8 @@ export default function Shop() {
     alert(`Drink "${drink.name}" has been added to your orders!`);
   };
 
+
+  
   return (
     <>
       <HelmetProvider>
@@ -83,10 +115,7 @@ export default function Shop() {
               .filter((drink) => drink.tag === "Cappucino")
               .map((drink) => {
                 return (
-                  <div
-                    className="drink col-sm-10 col-md-5 col-lg-4"
-                    key={drink.id}
-                  >
+                  <div className="drink col-lg-2 col-10" key={drink.id}>
                     <div className="img">
                       <img src={drink.image} alt={drink.name} />
                     </div>
@@ -109,13 +138,11 @@ export default function Shop() {
             <div className="col-10 category">
               <h3>Iced Coffees</h3>
             </div>
-            {drinks.filter((drink) => drink.tag === "iced coffee").map(
-              (drink) => {
+            {drinks
+              .filter((drink) => drink.tag === "iced coffee")
+              .map((drink) => {
                 return (
-                  <div
-                    className="drink col-sm-10 col-md-5 col-lg-4"
-                    key={drink.id}
-                  >
+                  <div className="drink col-lg-2 col-10" key={drink.id}>
                     <div className="img">
                       <img src={drink.image} alt={drink.name} />
                     </div>
@@ -134,8 +161,7 @@ export default function Shop() {
                     </div>
                   </div>
                 );
-              }
-            )}
+              })}
           </div>
 
           <button className="toOrders">

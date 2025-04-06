@@ -47,7 +47,7 @@ export default function Gallery() {
           <div className="photos row">
             {Photos.map((photo) => {
               return (
-                <div className="photo col-3 col-md-3 col-sm-5" key={photo.id}>
+                <div className="photo col-10 col-lg-3" key={photo.id}>
                   <div className="overlay">
                     <h6>our gallery</h6>
                   </div>

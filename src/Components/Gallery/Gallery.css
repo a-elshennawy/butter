@@ -1,136 +1,112 @@
+:root {
+  font-size: 16px;
+}
+
 .gallery {
+  .header {
+    background-image: url("/Images/site-img13.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
 
-    .header {
-        background-image: url('/Images/site-img13.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 60px;
-        justify-content: center;
-        align-items: center;
+    .left {
+      color: #fff;
 
-        .left {
-            color: #fff;
+      h2 {
+        text-transform: uppercase !important;
+        font-family: bold;
+      }
 
-            h2 {
-                text-transform: uppercase !important;
-                font-family: bold;
-            }
-
-            h6 {
-                font-family: bold;
-            }
-        }
-
-        .right {
-            color: #fff;
-            text-align: end;
-
-            p {
-                font-family: regular;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        color: #fd8f00;
-                    }
-                }
-            }
-        }
+      h6 {
+        font-family: bold;
+      }
     }
 
-    .photos {
-        margin: 50px 0px;
-        justify-content: center;
-        gap: 20px;
+    .right {
+      color: #fff;
+      text-align: end;
 
-        .photo {
-            margin: 0;
-            padding: 0;
-            cursor: pointer;
-            width: 20%;
-            position: relative;
+      p {
+        font-family: regular;
 
-            .overlay {
-                position: absolute;
-                top: 50%;
-                left: 35%;
-                display: none;
-                opacity: 0;
-                transition: all .5s ease-in-out;
+        a {
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s ease-in-out;
 
-                h6 {
-                    color: #fff;
-                    text-transform: uppercase !important;
-                    font-family: regular;
-                    opacity: 0;
-                    z-index: 11;
-                    transition: all .5s ease-in-out;
-                }
-            }
-
-            .img {
-                overflow: hidden;
-                margin: 0;
-
-                img {
-                    transition: all .2s ease-in-out;
-                }
-            }
-
-            &:hover {
-                .img {
-                    filter: brightness(30%);
-
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-
-                .overlay {
-                    display: flex;
-                    opacity: 1;
-
-                    h6 {
-
-                        opacity: 1;
-                    }
-                }
-            }
-
+          &:hover {
+            color: #fd8f00;
+          }
         }
+      }
     }
+  }
+
+  .photos {
+    margin: 50px 0px;
+    justify-content: center;
+    gap: 20px;
+
+    .photo {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        display: none;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+
+        h6 {
+          color: #fff;
+          text-transform: uppercase !important;
+          font-family: regular;
+          opacity: 0;
+          z-index: 11;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      .img {
+        overflow: hidden;
+        margin: 0;
+
+        img {
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      &:hover {
+        .img {
+          filter: brightness(30%);
+
+          img {
+            transform: scale(1.1);
+          }
+        }
+
+        .overlay {
+          display: flex;
+          opacity: 1;
+
+          h6 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* responsive */
 @media screen and (max-width: 992px) {
-    .gallery {
-        .photos {
-            .photo {
-                width: 30%;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .gallery {
-        .photos {
-            .photo {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .gallery {
-        .photos {
-            .photo {
-                width: 90%;
-            }
-        }
-    }
+  :root {
+    font-size: 14px;
+  }
 }
