@@ -13,9 +13,7 @@ export default function Navbar() {
   return (
     <>
       <div className="outer">
-        <div className="connection">
-         
-        </div>
+        <div className="connection"></div>
         <div className="container">
           <div className="navbar row">
             <div className="logo col-1">
@@ -133,7 +131,7 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="bottomBanner row">
-            <div className="socials col-6">
+            <div className="socials col-8">
               <Link to={"/blog"}>
                 <i className="fa-brands fa-facebook-f"></i>
               </Link>
@@ -144,7 +142,7 @@ export default function Navbar() {
                 <i className="fa-brands fa-instagram"></i>
               </Link>
             </div>
-            <div className="logout col-4">
+            <div className="logout col-3">
               <i
                 onClick={handleLogout}
                 className="fa-solid fa-person-walking-arrow-right"
