@@ -4,22 +4,19 @@ import Layout from "./Components/Layout/Layout";
 import Error_404 from "./Components/Error_404/Error_404";
 import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 
-const lazyLoad = (path, namedExport = null) =>
-  lazy(() =>
-    import(`./Components/${path}.jsx`).then((module) => ({
-      default: namedExport ? module[namedExport] : module.default,
-    }))
-  );
-
-const Home = lazyLoad("Home/Home");
-const Shop = lazyLoad("Shop/Shop");
-const Reservations = lazyLoad("Reservations/Reservations");
-const Gallery = lazyLoad("Gallery/Gallery");
-const Blog = lazyLoad("Blog/Blog");
-const Login = lazyLoad("Login/Login");
-const Register = lazyLoad("Register/Register");
-const Orders = lazyLoad("Orders/Orders");
-const CurrentReservations = lazyLoad("CurrentReservations/CurrentReservations");
+const Home = lazy(() => import("./Components/Home/Home.jsx"));
+const Shop = lazy(() => import("./Components/Shop/Shop.jsx"));
+const Reservations = lazy(() =>
+  import("./Components/Reservations/Reservations.jsx")
+);
+const Gallery = lazy(() => import("./Components/Gallery/Gallery.jsx"));
+const Blog = lazy(() => import("./Components/Blog/Blog.jsx"));
+const Login = lazy(() => import("./Components/Login/Login.jsx"));
+const Register = lazy(() => import("./Components/Register/Register.jsx"));
+const Orders = lazy(() => import("./Components/Orders/Orders.jsx"));
+const CurrentReservations = lazy(() =>
+  import("CurrentReservations/CurrentReservations.jsx")
+);
 
 const createRoute = (path, element) => ({
   path,
