@@ -6,7 +6,7 @@ import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 
 const lazyLoad = (path, namedExport = null) =>
   lazy(() =>
-    import(`./Components/${path}`).then((module) => ({
+    import(`./Components/${path}.jsx`).then((module) => ({
       default: namedExport ? module[namedExport] : module.default,
     }))
   );

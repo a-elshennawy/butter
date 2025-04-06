@@ -307,6 +307,6 @@
 
 @media screen and (max-width: 576px) {
   .offcanvas {
-    width: 50vw !important;
+    width: 80vw !important;
   }
 }
