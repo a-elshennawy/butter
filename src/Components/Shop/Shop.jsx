@@ -6,7 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import PostsSlider from "../PostsSlider/PostsSlider";
 
 export default function Shop() {
-  const [Drinks, setDrinks] = useState([]);
+  const [drinks, setDrinks] = useState([]);
   const loggedUser = localStorage.getItem("login");
   const currentUser = loggedUser ? JSON.parse(loggedUser).username : null;
   const navigate = useNavigate();
@@ -79,8 +79,9 @@ export default function Shop() {
             <div className="col-10 category">
               <h3>Cappucinos</h3>
             </div>
-            {Drinks.filter((drink) => drink.tag === "Cappucino").map(
-              (drink) => {
+            {drinks
+              .filter((drink) => drink.tag === "Cappucino")
+              .map((drink) => {
                 return (
                   <div
                     className="drink col-sm-10 col-md-5 col-lg-4"
@@ -104,12 +105,11 @@ export default function Shop() {
                     </div>
                   </div>
                 );
-              }
-            )}
+              })}
             <div className="col-10 category">
               <h3>Iced Coffees</h3>
             </div>
-            {Drinks.filter((drink) => drink.tag === "iced coffee").map(
+            {drinks.filter((drink) => drink.tag === "iced coffee").map(
               (drink) => {
                 return (
                   <div

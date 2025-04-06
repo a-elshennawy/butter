@@ -93,10 +93,7 @@ export default function Cart() {
                 const status = timeLeft > 0 ? "Pending" : "Waiting to Pick Up";
 
                 return (
-                  <div
-                    className="order-card col-3 col-lg-5 col-md-10"
-                    key={index}
-                  >
+                  <div className="order-card col-12 col-lg-3" key={index}>
                     <div className="img">
                       <img src={order.image} alt="" />
                     </div>
@@ -117,7 +114,7 @@ export default function Cart() {
                         {order.orderNumber}
                       </p>
                       <button
-                        className="doneBtn col-5 btn"
+                        className="doneBtn col-6 btn"
                         onClick={() => handleRecieved(index)}
                       >
                         Mark as Received
@@ -144,10 +141,7 @@ export default function Cart() {
               {JSON.parse(localStorage.getItem("orderHistory"))?.[
                 currentUser
               ]?.map((order, index) => (
-                <div
-                  className="recievedItem-card col-3 col-lg-5 col-md-10"
-                  key={index}
-                >
+                <div className="recievedItem-card col-12 col-lg-3" key={index}>
                   <div className="img">
                     <img src={order.image} alt="" />
                   </div>
