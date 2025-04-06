@@ -1,6 +1,5 @@
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Offline } from "react-detect-offline";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -15,12 +14,7 @@ export default function Navbar() {
     <>
       <div className="outer">
         <div className="connection">
-          <Offline>
-            <p>
-              <i className="fa-solid fa-wifi"></i> you might have connection
-              issues <i className="fa-solid fa-wifi"></i>
-            </p>
-          </Offline>
+         
         </div>
         <div className="container">
           <div className="navbar row">
