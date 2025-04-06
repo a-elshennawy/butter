@@ -4,30 +4,48 @@ import UpBtn from '../UpBtn/UpBtn';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function Blog() {
-    const [Posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [selectedTag, setSelectedTag] = useState('all');
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('./POSTS.json')
-            .then((response) => response.json())
-            .then((data) => {
+        const fetchPosts = async () => {
+            try {
+                const response = await fetch('/POSTS.json');
+                if (!response.ok) throw new Error('Failed to fetch posts');
+                const data = await response.json();
                 setPosts(data);
                 setFilteredPosts(data);
-            })
-            .catch((error) =>
-                console.log('Error fetching data from your API file', error)
-            );
+            } catch (err) {
+                setError(err.message);
+                console.error('Error fetching posts:', err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPosts();
     }, []);
 
     const handleTagClick = (tag) => {
         setSelectedTag(tag);
         if (tag === 'all') {
-            setFilteredPosts(Posts);
+            setFilteredPosts(posts);
         } else {
-            setFilteredPosts(Posts.filter((post) => post.tags.includes(tag)));
+            setFilteredPosts(
+                posts.filter(post => 
+                    post.tags?.some(
+                        postTag => postTag.toLowerCase() === tag.toLowerCase()
+                    )
+                )
+            );
         }
     };
+
+    if (loading) return <div className="loading">Loading posts...</div>;
+    if (error) return <div className="error">Error: {error}</div>;
 
     return (
         <>
