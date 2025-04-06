@@ -155,7 +155,6 @@
     .drink {
       margin: 0px;
       padding: 0px;
-      width: 20%;
 
       .img {
         position: relative;
@@ -321,16 +320,12 @@
 
 /* responsive */
 @media screen and (max-width: 992px) {
-  .HomeSlider {
-    display: none;
+  :root {
+    font-size: 14px;
   }
 
-  .orderNow {
-    .samples {
-      .drink {
-        width: 40%;
-      }
-    }
+  .HomeSlider {
+    display: none;
   }
 
   .fromBlog {

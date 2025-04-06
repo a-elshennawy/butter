@@ -45,7 +45,7 @@ export default function Ordering() {
         <div className="samples row">
           {Drinks.filter((drink) => drink.home === true).map((drink) => {
             return (
-              <div className="drink col-3 col-md-5 col-sm-10" key={drink.id}>
+              <div className="drink col-lg-3 col-10" key={drink.id}>
                 <div className="img">
                   <img src={drink.image} alt={drink.name} />
                   <span>$ {drink.price}</span>

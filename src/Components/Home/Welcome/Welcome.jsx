@@ -6,7 +6,7 @@ export default function Welcome() {
       <div className="Welcome">
         <div className="container">
           <div className="insiderWelcome row">
-            <div className="text col-5">
+            <div className="text col-lg-5 col-12">
               <h2>welcome</h2>
               <p>
                 Pellentesque mi purus, eleifend sedt commodo vel, sagittis elts
@@ -22,7 +22,7 @@ export default function Welcome() {
               </h6>
               <img src="./Images/site-img51.png" alt="" />
             </div>
-            <div className="img col-5">
+            <div className="img col-lg-5 col-12">
               <img src="./Images/site-img03.png" alt="" />
             </div>
           </div>
