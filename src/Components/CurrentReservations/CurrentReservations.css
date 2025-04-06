@@ -1,122 +1,131 @@
+:root {
+  font-size: 16px;
+}
+
 .currRes {
-    text-align: center;
-    background-image: url('/Images/site-img12.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  text-align: center;
+  background-image: url("/Images/site-img12.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-    .header {
-        background-image: none !important;
-        padding: 60px;
-        justify-content: center;
-        align-items: center;
+  .header {
+    background-image: none !important;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
 
-        .left {
-            color: #fff;
+    .left {
+      color: #fff;
 
-            h2 {
-                text-transform: uppercase !important;
-                font-family: bold;
-            }
+      h2 {
+        text-transform: uppercase !important;
+        font-family: bold;
+      }
 
-            h6 {
-                font-family: bold;
-            }
-        }
-
-        .right {
-            color: #fff;
-            text-align: end;
-
-            p {
-                font-family: regular;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                    transition: all .3s ease-in-out;
-
-                    &:hover {
-                        color: #fd8f00;
-                    }
-                }
-            }
-        }
+      h6 {
+        font-family: bold;
+      }
     }
 
-    .booked {
-        padding: 40px 0px;
-        justify-content: center;
-        gap: 20px;
+    .right {
+      color: #fff;
+      text-align: end;
 
-        .reservation-card {
-            text-align: start;
-            outline: 1px solid #fff;
-            border-radius: 5px;
-            padding: 10px;
-            backdrop-filter: blur(10px) !important;
-
-            h5 {
-                color: #fff;
-                text-transform: uppercase !important;
-                font-family: bold;
-            }
-
-            p {
-                font-family: regular;
-                text-transform: uppercase !important;
-                color: #fff;
-
-                strong {
-                    color: #fd8f00;
-                }
-            }
-
-            .cancel {
-                padding: 10px;
-                border: none;
-                background-color: #fd8f00;
-                color: #fff;
-                text-transform: uppercase !important;
-                font-family: bold;
-
-                &:hover {
-                    background-color: #fff;
-                    color: #303030;
-
-                }
-            }
-        }
-
-        .emptyRes {
-            color: #fff;
-            background-color: #3030309c;
-            backdrop-filter: blur (1px);
-            padding: 30px;
-            text-align: center;
-        }
-    }
-
-    .goToRes {
-        margin: 20px;
-        width: fit-content;
-        padding: 10px 20px;
-        border: none;
-        background-color: #fd8f00;
+      p {
+        font-family: regular;
 
         a {
-            text-decoration: none;
-            color: #fff;
-            text-transform: uppercase !important;
-            font-family: bold;
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: #fd8f00;
+          }
         }
+      }
+    }
+  }
+
+  .booked {
+    padding: 40px 0px;
+    justify-content: center;
+    gap: 20px;
+
+    .reservation-card {
+      text-align: start;
+      outline: 1px solid #fff;
+      border-radius: 5px;
+      padding: 10px;
+      backdrop-filter: blur(10px) !important;
+
+      h5 {
+        color: #fff;
+        text-transform: uppercase !important;
+        font-family: bold;
+      }
+
+      p {
+        font-family: regular;
+        text-transform: uppercase !important;
+        color: #fff;
+
+        strong {
+          color: #fd8f00;
+        }
+      }
+
+      .cancel {
+        padding: 10px;
+        border: none;
+        background-color: #fd8f00;
+        color: #fff;
+        text-transform: uppercase !important;
+        font-family: bold;
 
         &:hover {
-            background-color: #fff;
-
-            a {
-                color: #303030;
-            }
+          background-color: #fff;
+          color: #303030;
         }
+      }
     }
+
+    .emptyRes {
+      color: #fff;
+      background-color: #3030309c;
+      backdrop-filter: blur (1px);
+      padding: 30px;
+      text-align: center;
+    }
+  }
+
+  .goToRes {
+    margin: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    background-color: #fd8f00;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase !important;
+      font-family: bold;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      a {
+        color: #303030;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 14px;
+  }
 }

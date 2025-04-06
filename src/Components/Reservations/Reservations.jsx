@@ -202,7 +202,7 @@ export default function Reservations() {
               reserve now!
             </button>
             <button className="toResBtn col-6">
-              <Link to={"/CurrentReservations"}>check your reservations</Link>
+              <Link to={"/UserRes"}>check your reservations</Link>
             </button>
           </form>
         </div>

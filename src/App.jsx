@@ -15,7 +15,7 @@ const Login = lazy(() => import("./Components/Login/Login.jsx"));
 const Register = lazy(() => import("./Components/Register/Register.jsx"));
 const Orders = lazy(() => import("./Components/Orders/Orders.jsx"));
 const CurrentReservations = lazy(() =>
-  import("./Components/CurrentReservations/CurrentReservations.jsx")
+  import("./Components/CurrentReservations/UserRes.jsx")
 );
 
 const createRoute = (path, element) => ({
@@ -35,7 +35,7 @@ function App() {
         createRoute("gallery", <Gallery />),
         createRoute("blog", <Blog />),
         createRoute("orders", <Orders />),
-        createRoute("current-reservations", <CurrentReservations />),
+        createRoute("UserRes", <CurrentReservations />),
       ],
     },
     createRoute("login", <Login />),
