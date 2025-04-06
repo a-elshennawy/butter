@@ -1,10 +1,13 @@
 :root {
   font-size: 16px;
 }
-
+body {
+  background-color: #000 !important;
+}
 .currRes {
   text-align: center;
   background-image: url("/Images/site-img12.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,6 +61,7 @@
       outline: 1px solid #fff;
       border-radius: 5px;
       padding: 10px;
+      height: fit-content;
       backdrop-filter: blur(10px) !important;
 
       h5 {

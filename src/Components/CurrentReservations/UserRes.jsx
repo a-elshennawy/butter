@@ -31,8 +31,7 @@ export default function CurrentReservations() {
             <div className="col-6 right">
               <p>
                 <Link to={"/"}>home</Link> /{" "}
-                <Link to={"/reservations"}>reservations</Link> / your
-                Reservations
+                <Link to={"/reservations"}>reservations</Link>
               </p>
             </div>
           </div>
