@@ -6,8 +6,8 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    Username: "",
-    Password: "",
+    username: "",
+    password: "",
   });
 
   const [error, setError] = useState("");
@@ -26,7 +26,7 @@ export default function Login() {
       JSON.parse(localStorage.getItem("User_Reg_Data")) || [];
 
     const user = existingUsers.find(
-      (user) => user.Username === formData.Username
+      (user) => user.username.toLowerCase() === formData.username.toLowerCase()
     );
 
     if (!user) {
@@ -34,12 +34,12 @@ export default function Login() {
       return;
     }
 
-    if (user.Password !== formData.Password) {
+    if (user.password !== formData.password) {
       setError("incorrect password");
       return;
     }
 
-    localStorage.setItem("login", JSON.stringify({ username: user.Username }));
+    localStorage.setItem("login", JSON.stringify({ username: user.username }));
     setError("");
     navigate("/");
   };
@@ -56,7 +56,7 @@ export default function Login() {
       </HelmetProvider>
       <div className="container-fluid">
         <div className="header row">
-          <div className="left col-10">
+          <div className="left col-12">
             <h2>log in</h2>
             <h6>use your account</h6>
           </div>
@@ -70,10 +70,10 @@ export default function Login() {
               <i className="fa-solid fa-user"></i>
               <input
                 type="text"
-                name="Username"
+                name="username"
                 placeholder="username"
                 id="login_username"
-                value={formData.Username}
+                value={formData.username}
                 onChange={handleChange}
               />
             </div>
@@ -81,10 +81,10 @@ export default function Login() {
               <i className="fa-solid fa-lock"></i>
               <input
                 type="password"
-                name="Password"
+                name="password"
                 placeholder="password"
                 id="login_password"
-                value={formData.Password}
+                value={formData.password}
                 onChange={handleChange}
               />
             </div>

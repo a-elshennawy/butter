@@ -2,7 +2,7 @@
   background-image: url("/Images/site-img10.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px;
+  padding: 50px;
   justify-content: center;
   align-items: center;
 
@@ -133,7 +133,7 @@
 @media screen and (max-width: 768px) {
   .login {
     .loginform {
-      width: 40%;
+      width: 50%;
       margin: auto;
     }
   }

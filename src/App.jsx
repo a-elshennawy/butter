@@ -28,6 +28,7 @@ function App() {
     {
       path: "/",
       element: <Layout />,
+
       children: [
         createRoute("", <Home />),
         createRoute("shop", <Shop />),
