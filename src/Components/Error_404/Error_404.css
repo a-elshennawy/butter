@@ -1,70 +1,69 @@
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .error {
-    position: relative !important;
-    text-align: center;
+  position: relative !important;
+  text-align: center;
 
-    img {
-        filter: brightness(50%);
-        height: 100vh;
+  img {
+    filter: brightness(50%);
+    height: 100dvh;
+    width: 100dvw;
+  }
+
+  .content {
+    justify-content: center;
+    position: fixed;
+    background-color: #342e2e73;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+
+    i {
+      font-size: 50px;
+      color: #fff;
+      margin: 30px;
     }
 
-    .content {
-        position: absolute;
-        background-color: #342e2e73;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 30px;
-
-        i {
-            font-size: 50px;
-            color: #fff;
-            margin: 30px;
-        }
-
-        h1 {
-            color: #fff;
-            font-family: bold;
-            text-transform: uppercase !important;
-        }
-
-        h3 {
-            color: #fff;
-            font-family: regular;
-            margin: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            font-family: bold;
-            text-transform: uppercase !important;
-            letter-spacing: 2px;
-            color: #fff;
-            background-color: #fd8f00;
-            padding: 10px 20px;
-
-            &:hover {
-                background-color: #fd8f00;
-
-            }
-        }
+    h1 {
+      color: #fff;
+      font-family: bold;
+      text-transform: uppercase !important;
     }
 
+    h3 {
+      color: #fff;
+      font-family: regular;
+      margin: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: bold;
+      text-transform: uppercase !important;
+      letter-spacing: 2px;
+      color: #fff;
+      background-color: #fd8f00;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: #fd8f00;
+      }
+    }
+  }
 }
-
 
 /* responsive */
-@media screen and (max-width:768px) {
-    :root {
-        font-size: 14px;
-    }
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 14px;
+  }
 }
 
-@media screen and (max-width:576px) {
-    :root {
-        font-size: 10px;
-    }
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
 }
