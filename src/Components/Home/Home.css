@@ -1,5 +1,5 @@
 .background {
-  background-image: url(/static/parallax-bg.jpg);
+  background-image: url(/Images/parallax-bg.jpg);
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -223,7 +223,7 @@
 }
 
 .call {
-  background-image: url("/static/parallax-bg1.jpg");
+  background-image: url("/Images/parallax-bg1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
