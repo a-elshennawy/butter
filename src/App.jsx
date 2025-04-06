@@ -15,7 +15,7 @@ const Login = lazy(() => import("./Components/Login/Login.jsx"));
 const Register = lazy(() => import("./Components/Register/Register.jsx"));
 const Orders = lazy(() => import("./Components/Orders/Orders.jsx"));
 const CurrentReservations = lazy(() =>
-  import("CurrentReservations/CurrentReservations.jsx")
+  import("./Components/CurrentReservations/CurrentReservations.jsx")
 );
 
 const createRoute = (path, element) => ({
