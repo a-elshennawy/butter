@@ -1,35 +1,55 @@
-import Home from './Components/Home/Home';
-import Layout from './Components/Layout/Layout'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Shop from './Components/Shop/Shop';
-import Reservations from './Components/Reservations/Reservations';
-import Gallery from './Components/Gallery/Gallery';
-import Blog from './Components/Blog/Blog';
-import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
-import Orders from './Components/Orders/Orders';
-import Error_404 from './Components/Error_404/Error_404';
-import CurrentReservations from './Components/CurrentReservations/CurrentReservations';
+import { lazy, Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./Components/Layout/Layout";
+import Error_404 from "./Components/Error_404/Error_404";
+import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 
+const lazyLoad = (path, namedExport = null) =>
+  lazy(() =>
+    import(`./Components/${path}`).then((module) => ({
+      default: namedExport ? module[namedExport] : module.default,
+    }))
+  );
+
+const Home = lazyLoad("Home/Home");
+const Shop = lazyLoad("Shop/Shop");
+const Reservations = lazyLoad("Reservations/Reservations");
+const Gallery = lazyLoad("Gallery/Gallery");
+const Blog = lazyLoad("Blog/Blog");
+const Login = lazyLoad("Login/Login");
+const Register = lazyLoad("Register/Register");
+const Orders = lazyLoad("Orders/Orders");
+const CurrentReservations = lazyLoad("CurrentReservations/CurrentReservations");
+
+const createRoute = (path, element) => ({
+  path,
+  element: <Suspense fallback={<LoadingSpinner />}>{element}</Suspense>,
+});
 
 function App() {
-
-  let routes = createBrowserRouter([{
-    path: "/", element: <Layout />, children: [
-      { index: true, element: <Home /> },
-      { path: "shop", element: <Shop /> },
-      { path: "Reservations", element: <Reservations /> },
-      { path: "Gallery", element: <Gallery /> },
-      { path: "blog", element: <Blog /> },
-      { path: "orders", element: <Orders /> },
-      { path: "CurrentReservations", element: <CurrentReservations /> }
-    ]
-  },
-  { path: "login", element: <Login /> },
-  { path: "register", element: <Register /> },
-  { path: "*", element: <Error_404 /> }
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        createRoute("", <Home />),
+        createRoute("shop", <Shop />),
+        createRoute("reservations", <Reservations />),
+        createRoute("gallery", <Gallery />),
+        createRoute("blog", <Blog />),
+        createRoute("orders", <Orders />),
+        createRoute("current-reservations", <CurrentReservations />),
+      ],
+    },
+    createRoute("login", <Login />),
+    createRoute("register", <Register />),
+    {
+      path: "*",
+      element: <Error_404 />,
+    },
   ]);
-  return <RouterProvider router={routes} />
+
+  return <RouterProvider router={routes} />;
 }
 
 export default App;
