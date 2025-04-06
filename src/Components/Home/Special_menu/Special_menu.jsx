@@ -1,6 +1,6 @@
 import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
-import './Special_menu.css'
+import '../Home.css'
 
 export default function Special_menu() {
 
