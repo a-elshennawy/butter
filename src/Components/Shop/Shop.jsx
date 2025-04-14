@@ -87,7 +87,7 @@ export default function Shop() {
           <title>butter - Shop</title>
           <meta
             name="description"
-            content="in the butter shop, you can order your drink without asking anyone"
+            content="in butter shop, you can order your drink without asking anyone"
           />
         </Helmet>
       </HelmetProvider>
